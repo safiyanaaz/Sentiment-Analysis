@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Sentiment Analysis </title>
+<style>
+form{
+	border: 2px solid red;
+	border-radius: 2px;
+	border-color: grey;
+	border-width: 20px;
+	margin-top: 100px;
+	margin-right: 200px;
+	margin-left: 200px;
+
+}
+h2{
+	margin-left: 300px;
+	color:red;
+}
+h3{
+	margin-left: 300px;
+	color:blue;
+}
+input {
+  width: 30%;
+  height: 30%;
+  padding: 10px 20px;
+  margin-left: 300px;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 10px 2px;
+  margin-left: 300px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 15%;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<form action="{{ url_for('predict')}}" method="POST">
+	<h2>Sentiment Analysis</h2>
+
+	<h3>Your Review</h3>
+	<input type="text" name="input1">
+	<br>
+	<br>
+	<input type="submit" class="btn-ifo" value="predict">
+</form>
+
+</body>			
+</html>
